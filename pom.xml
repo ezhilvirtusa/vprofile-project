@@ -253,6 +253,7 @@
 
 
     <build>
+      <finalName>ROOT</finalName>
         <plugins>
             <!-- Jetty Plugin -->
             <plugin>
