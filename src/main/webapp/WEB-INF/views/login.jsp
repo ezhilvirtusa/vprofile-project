@@ -129,7 +129,7 @@
                     </span>
 
                     <a href="${contextPath}/registration" class="txt2">
-                        Sign Up
+                        Sign IN
                     </a>
                 </div>
             </form>
