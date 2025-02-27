@@ -125,7 +125,7 @@
 
                 <div class="flex-col-c p-t-155">
                     <span class="txt1 p-b-17">
-                        Don't have an account?
+                        Don't have an account???
                     </span>
 
                     <a href="${contextPath}/registration" class="txt2">
