@@ -6,6 +6,7 @@
     <groupId>com.visualpathit</groupId>
     <artifactId>ROOT</artifactId>
     <packaging>war</packaging>
+    <version>v2</version>
     <name>Visualpathit VProfile Webapp</name>
     <url>http://maven.apache.org</url>
 
