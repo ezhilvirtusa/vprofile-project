@@ -19,7 +19,7 @@ phases:
   build:
     commands:
       - mvn clean install -DskipTests
-artifacts:
+artifacts:  
   files:
      - target/**/*.war
   discard-paths: yes
