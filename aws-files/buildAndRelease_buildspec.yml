@@ -1,7 +1,7 @@
 version: 0.2
 env:
   parameter-store:
-    CODEARTIFACT_AUTH_TOKEN: codeartifact-token
+   # CODEARTIFACT_AUTH_TOKEN: codeartifact-token
     dbhost: RDS-Endpoint
     dbuser: RDSUSER
     dbpass: RDSPASS
