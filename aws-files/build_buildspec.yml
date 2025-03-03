@@ -1,4 +1,4 @@
-  version: 0.2
+version: 0.2
 env: 
   parameter-store:
     CODEARTIFACT_AUTH_TOKEN: CODEARTIFACT_AUTH_TOKEN
@@ -15,6 +15,7 @@ phases:
       java: corretto8
     commands:
       - cp ./settings.xml /root/.m2/settings.xml
+      - export CODEARTIFACT_AUTH_TOKEN=`aws codeartifact get-authorization-token --domain ezhil-mvn --domain-owner 982081078500 --region us-east-1 --query authorizationToken --output text`
   pre_build:
     commands:
       - sed -i "s/jdbc.password=admin123/jdbc.password=$dbpass/" src/main/resources/application.properties
