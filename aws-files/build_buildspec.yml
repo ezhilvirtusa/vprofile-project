@@ -5,10 +5,10 @@ env:
     dbhost: RDS-Endpoint
     dbuser: RDSUSER
     dbpass: RDSPASS
-    mchost: orange-memcached-url
-    rmqhost: orange-rmq
-    rmquser: orange-rmq-user
-    rmqpass: orange-rmq-pass
+    #mchost: orange-memcached-url
+    #rmqhost: orange-rmq
+    #rmquser: orange-rmq-user
+    #rmqpass: orange-rmq-pass
 phases:
   install:
     runtime-versions:
@@ -21,11 +21,11 @@ phases:
       - sed -i "s/jdbc.password=admin123/jdbc.password=$dbpass/" src/main/resources/application.properties
       - sed -i "s/jdbc.username=admin/jdbc.username=$dbuser/" src/main/resources/application.properties
       - sed -i "s/db01:3306/$dbhost:3306/" src/main/resources/application.properties
-      - sed -i "s/memcached.active.host=mc01/memcached.active.host=$mchost/" src/main/resources/application.properties
-      - sed -i "s/rabbitmq.address=rmq01/rabbitmq.address=$rmqhost/" src/main/resources/application.properties
-      - sed -i "s/rabbitmq.port=5672/rabbitmq.port=5671/" src/main/resources/application.properties
-      - sed -i "s/rabbitmq.username=test/rabbitmq.username=$rmquser/" src/main/resources/application.properties
-      - sed -i "s/rabbitmq.password=test/rabbitmq.password=$rmqpass/" src/main/resources/application.properties
+      #- sed -i "s/memcached.active.host=mc01/memcached.active.host=$mchost/" src/main/resources/application.properties
+      #- sed -i "s/rabbitmq.address=rmq01/rabbitmq.address=$rmqhost/" src/main/resources/application.properties
+      #- sed -i "s/rabbitmq.port=5672/rabbitmq.port=5671/" src/main/resources/application.properties
+      #- sed -i "s/rabbitmq.username=test/rabbitmq.username=$rmquser/" src/main/resources/application.properties
+      #- sed -i "s/rabbitmq.password=test/rabbitmq.password=$rmqpass/" src/main/resources/application.properties
       - apt-get update
       - apt-get install -y jq 
       - wget https://downloads.apache.org/maven/maven-3/3.8.8/binaries/apache-maven-3.8.8-bin.tar.gz
