@@ -25,7 +25,7 @@ phases:
       - export PATH=$PATH:/sonar-scanner-3.3.0.1492-linux/bin/
   build:
     commands:
-      - mvn test
+      - mvn test -X
       - mvn checkstyle:checkstyle     
       - echo "Installing Jdk11 as its a dependency for sonarqube code analysis"
       - apt-get install -y openjdk-11-jdk
