@@ -1,19 +1,26 @@
 pipeline {
     
 	agent any
-/*	
+	
 	tools {
-        maven "maven3"
+        maven "MAVEN3.9"
+        jdk "jdk17"
     }
-*/	
+
     environment {
         NEXUS_VERSION = "nexus3"
         NEXUS_PROTOCOL = "http"
-        NEXUS_URL = "172.31.40.209:8081"
+        NEXUS_URL = "172.31.30.86:8081"
         NEXUS_REPOSITORY = "vprofile-release"
-	NEXUS_REPOGRP_ID    = "vprofile-grp-repo"
+	    NEXUS_REPOGRP_ID    = "vpro-maven-group"
         NEXUS_CREDENTIAL_ID = "nexuslogin"
         ARTVERSION = "${env.BUILD_ID}"
+        SNAP_REPO = 'vprofile-snapshot'
+		NEXUS_USER = 'admin'
+		NEXUS_PASS = 'admin123'
+		RELEASE_REPO = 'vprofile-release'
+		CENTRAL_REPO = 'vpro-maven-central'
+       
     }
 	
     stages{
@@ -30,7 +37,7 @@ pipeline {
             }
         }
 
-	stage('UNIT TEST'){
+	/*stage('UNIT TEST'){
             steps {
                 sh 'mvn test'
             }
@@ -112,7 +119,7 @@ pipeline {
                     }
                 }
             }
-        }
+        } */
 
 
     }

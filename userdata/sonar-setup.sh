@@ -31,7 +31,7 @@ runuser -l postgres -c "createuser sonar"
 sudo -i -u postgres psql -c "ALTER USER sonar WITH ENCRYPTED PASSWORD 'admin123';"
 sudo -i -u postgres psql -c "CREATE DATABASE sonarqube OWNER sonar;"
 sudo -i -u postgres psql -c "GRANT ALL PRIVILEGES ON DATABASE sonarqube to sonar;"
-systemctl restart  postgresql
+systemctl restart                                                                                                                                                                               gresql
 #systemctl status -l   postgresql
 netstat -tulpena | grep postgres
 sudo mkdir -p /sonarqube/
